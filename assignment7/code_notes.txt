@@ -1,0 +1,121 @@
+dupfilter.py notes:
+---
+This Python script is designed to read a sequence of integers from the standard input and write them to the standard output, but with a unique twist: it only writes a number if it's different from the one that was previously read.
+
+1. Import the stdio module: This module is used for reading from and writing to standard input and output.
+
+2. Define the main() function: This is where the main logic of the program resides.
+
+3. Initialize 'previous' to None: This variable keeps track of the last number that was read and processed.
+
+4. Start a while loop that runs as long as there is input to read (stdio.isEmpty() returns False).
+
+5. Inside the loop, read an integer from the standard input and store it in 'current'.
+
+6. Check if the current number is different from the previous one. This is to ensure that consecutive duplicate numbers are not printed.
+
+7. If 'current' is different and 'previous' is not None (to avoid printing a space before the first number), write a space to standard output.
+
+8. Write the current number to the standard output.
+
+9. Update 'previous' to be the current number, preparing it for the next iteration of the loop.
+
+10. Once the input is exhausted, write a newline character to the standard output to end the output cleanly.
+
+11. The "if __name__ == '__main__':" check is a common Python idiom. It means this script runs the main() function if it's executed as a standalone program (not imported as a module in another script).
+---
+
+wordcount.py notes:
+---
+This Python script counts the total number of words read from the standard input and outputs the count.
+
+1. Import the stdio module: This module is used for reading from and writing to standard input and output.
+
+2. Define the main() function: This function contains the primary logic for word counting.
+
+3. Initialize 'word_count' to 0: This variable keeps track of the total number of words read.
+
+4. Start a while loop that continues as long as there is input to read (stdio.isEmpty() returns False).
+
+5. Inside the loop, read a line from the standard input and store it in 'line'.
+
+6. Split the line into words using the split() method. This method splits the string into a list of words based on whitespace.
+
+7. Increment 'word_count' by the number of words in the current line, calculated using len(words).
+
+8. After processing all input lines, write the total word count to the standard output using stdio.writeln().
+
+9. The "if __name__ == '__main__':" check ensures that the main() function is called when the script is run as a standalone program, not when imported as a module in another script.
+---
+
+tabulate.py notes:
+---
+This Python script reads lines from standard input, parses each line to extract a name and two integers, and then calculates and formats the division of these integers.
+
+1. Import the stdio module: Used for input and output operations.
+
+2. Define the main() function: Contains the core logic of the program.
+
+3. Start a while loop that continues as long as there is input to be read (stdio.isEmpty() returns False).
+
+4. Inside the loop, read a line from standard input and store it in 'line'.
+
+5. Split the line into parts using the split() method. This typically expects each line to have a name followed by two integers.
+
+6. Assign the first element of the split line to 'name', and parse the second and third elements as integers, storing them in 'num1' and 'num2', respectively.
+
+7. Calculate the division of 'num1' by 'num2' and store the result in 'result'.
+
+8. Use stdio.writef to format and write the output. The format string "%-10s %4d %5d %8.3f\n" is used to align and format the name, the two integers, and the result, respectively.
+
+9. The "if __name__ == '__main__':" check ensures that main() is called when the script is run as a standalone program.
+---
+
+peaks.py notes:
+---
+This Python script identifies 'peaks' in a 2D grid of elevation values. A cell in the grid is considered a peak if its elevation is higher than those of its immediate neighbors.
+
+1. Import the stdarray and stdio modules: These are used for handling arrays and standard input/output operations.
+
+2. Define the is_peak function: This function takes a grid and the coordinates of a cell (row and col) and determines if the cell is a peak.
+
+3. In is_peak, get the elevation value of the current cell.
+
+4. Check if any neighboring cells (up, down, left, right) have an elevation greater than or equal to the current cell. If so, return False, indicating this is not a peak.
+
+5. If none of the neighbors have a higher elevation, return True, indicating a peak.
+
+6. Define the main() function: This function handles the main logic for reading the grid and finding peaks.
+
+7. Read the terrain grid using stdarray.readFloat2D(), which reads a 2D array of floating-point numbers (representing elevations) from standard input.
+
+8. Initialize num_peaks to 0, which will count the number of peaks in the terrain.
+
+9. Use nested for loops to iterate through each cell of the terrain grid.
+
+10. Call is_peak for each cell. If it returns True, increment num_peaks.
+
+11. After iterating through the entire grid, write the total number of peaks found to the standard output using stdio.writeln().
+
+12. The "if __name__ == '__main__':" check ensures that main() is called when the script is run as a standalone program.
+---
+sample2.py notes:
+---
+This script randomly selects a specified number of voter names from a larger list. The total number of names and the number to be selected are provided via command line arguments.
+
+1. Import necessary modules: 'random' for shuffling, 'sys' for command line arguments, 'stdarray' and 'stdio' for array handling and standard I/O operations.
+
+2. Define the main() function: Contains the primary logic of the program.
+
+3. Read 'n' (total number of names) and 'm' (number of names to select) from the command line arguments.
+
+4. Initialize an empty list 'voters' to store voter names.
+
+5. Use a for loop to read 'n' names from standard input, appending each to the 'voters' list.
+
+6. Shuffle the 'voters' list using random.shuffle() to randomize the order of names.
+
+7. Use another for loop to write the first 'm' names from the shuffled 'voters' list to standard output.
+
+8. The "if __name__ == '__main__':" check ensures that main() is called when the script is run as a standalone program.
+---

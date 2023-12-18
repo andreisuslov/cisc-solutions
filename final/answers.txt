@@ -1,0 +1,35 @@
+CISC 120: Fundamentals of Computing Take-home Final Exam
+2023 DEC 05
+Andrei Suslov
+
+Questions:
+    1. See glass.py submitted to Canvas.
+
+    2. See glass.py submitted to Canvas.
+    
+    3. ->
+The problem with the glass_inplace function is that iterating over the image's pixels in a particular order (top to bottom, left to right) has an impact on the iterations that follow as it makes changes to the pixels. This means that, in contrast to the glass_copy function, where each pixel's new color is determined only once, pixels that are processed later may be altered multiple times, resulting in greater fuzziness.
+This can be fixed by having the glass_inplace_new function store the new colors in a temporary Picture object. It should then apply these new colors to the original Picture object after determining all of the new colors. This guarantees that, as with glass_copy, the color of each pixel is only altered once.
+
+    4. See glass.py submitted to Canvas.
+
+    5. See glass.py submitted to Canvas.
+
+    6. See lab5_glass.py submitted to Canvas.
+
+    7. ->
+I used the `max()` and `min()` functions to clamp the random pixel coordinates to valid ranges in the glass filter functions within the `glass` module to prevent accessing pixels outside of the picture. For the x-coordinate, these ranges are {0} to {pic.width() - 1}, and for the y-coordinate, they are {0} to {pic.height() - 1}. This guarantees that the "fuzziness" effect's randomly selected pixel is always contained within the image's boundaries.
+`random_x = max(0, min(pic.width() - 1, i + random.randint(-fuzz, fuzz)))`
+`random_y = max(0, min(pic.height() - 1, j + random.randint(-fuzz, fuzz)))`
+- `max(0, ...)` guarantees that the coordinate stays above the minimum boundary, which is 0.
+- `min(pic.width() - 1, ...)` guarantees that the coordinate does not exceed `pic.width() - 1` (the maximum x-boundary).
+If this clamping had not been done, you would be trying to access an index of the image's pixel array that does not exist, which would probably lead to an IndexError or other similar error if you tried to access a pixel outside the image's boundaries. This would probably result in an unhandled exception and a program crash.
+
+    8. ->
+A Picture object represents an image as a MATRIX of pixels.
+A Picture object represents an image as a two-dimensional array or grid, where each element of the array represents a single pixel in the image. In this matrix: 
+- Every pixel in the image is a discrete point.
+- A pixel's coordinates in the matrix, which consist of a row and a column index, define its position.
+- Coordinates (0,0) are usually associated with the top-left corner pixel.
+- The image's height and width represent the number of rows and columns, respectively, in the matrix.
+- Depending on the image format, each pixel contains information about color and possibly transparency. These details can be changed individually or in groups to change the image.

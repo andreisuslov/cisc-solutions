@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional styles if needed */
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold text-gray-700">Company Logo</a>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-700 hover:text-gray-900">Menu Item</a>
+                <a href="#" class="text-gray-700 hover:text-gray-900">Menu Item</a>
+                <div class="relative">
+                    <button class="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring">
+                        Dropdown
+                    </button>
+                    <!-- Dropdown menu, show/hide based on dropdown state -->
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-10 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link #1</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link #2</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link #3</a>
+                    </div>
+                </div>
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Donate Button</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-3">Info about the Blogger</h2>
+                    <p class="text-gray-600">This section contains information about the person who writes the blog. You can add a short bio, photo, and links to social media here.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 px-4">
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <h1 class="text-2xl font-semibold text-gray-800 mb-3">Blog Post</h1>
+                    <p class="text-gray-600">Blog post text goes here. This is the main content area for the blog post. You can add paragraphs, images, videos, and other media to enrich the post.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Any additional JavaScript can go here
+    </script>
+</body>
+</html>

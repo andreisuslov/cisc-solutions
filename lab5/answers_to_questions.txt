@@ -1,0 +1,17 @@
+(a) ->
+Compared to the original, the enlarged image seems more grainy. This occurs as a result of the image being enlarged beyond its original resolution during the zoom process. Each pixel in the original image is used to display the picture as best it can, but when zooming in, the image is stretched, resulting in multiple pixels showing what a single pixel originally showed. This stretching causes the grainy look and loss of detail.
+---------------------------------------------
+
+(b) ->
+Zooming in can take a while, especially for larger images. The reason for this slowdown is that a high-resolution image has more pixels than the program can handle. The amount of time needed to scale each pixel increases with resolution. Reduce the amount of times the window is rescaled, and make program loops more efficient to increase efficiency. Performance may also be improved by simplifying processes to lower the computational load, such as by combining jobs into a single loop.
+---------------------------------------------
+
+(c) ->
+
+I utilized the following coordinates to enlarge the image of Miranda in the painting: X = 0.63 and Y = 0.69.
+
+I saved the picture file miranda.jpg to the same directory as my zoom.py script after downloading it.
+The next command I typed into the terminal was as follows:
+python zoom.py miranda.jpg 2 0.63 0.69
+
+With respect to the size of the image, this command centers the zoom at the coordinates (0.63, 0.69), using a 2x zoom factor. This should enlarge the painting's Miranda figure.

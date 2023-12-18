@@ -1,0 +1,6 @@
+Tom 11 5
+Jack 54 4
+Sally 7 9
+Sarah 11 12
+Mike 40 8
+Emma 24 6

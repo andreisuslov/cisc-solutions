@@ -1,0 +1,57 @@
+assignment10/domain.py ->
+---
+This Python script is designed to extract the domain type from a given website URL. It can be executed from the command line by running `python domain.py www.example.edu`.
+Function `get_domain_type(url)`:
+   - Extracts the domain type from the provided URL.
+   - Removes the protocol part (http, https) if present.
+   - Removes any path, query, or fragment parts.
+   - Returns the domain type as a string.
+Function `main()`:
+   - Checks if a URL is provided as a command-line argument.
+   - If no URL is provided, it displays a message indicating that no URL was provided.
+   - If a URL is provided, it calls the `get_domain_type(url)` function and prints the extracted domain type.
+To test the file, run it from the command line with a URL as an argument, like this: `python domain.py www.example.edu`.
+---
+
+assignment10/solidcolor.py -> 
+---
+1. Function `create_colored_picture(red, green, blue)`:
+   - Creates a solid color image with the specified RGB values.
+   - Returns the colored `Picture` object.
+2. Function `main()`:
+   - Checks if the correct number of command-line arguments (3) are provided. If not, it displays the usage information and exits with status code 1.
+   - Parses the red, green, and blue values from the command-line arguments.
+   - Validates that the color values are within the valid range (0-255).
+   - Calls the `create_colored_picture()` function to create the colored picture.
+   - Sets the canvas size for drawing to 256x256 pixels.
+   - Displays the colored picture using `stddraw.picture()` and shows it using `stddraw.show()`.
+---
+
+assignment10/isvaliddna.py -> 
+---
+1. Function `isValidDNA(dna_string)`:
+   - Checks if a given DNA string consists of valid DNA characters ('A', 'C', 'T', 'G').
+   - Iterates through each character in the `dna_string` and checks if it belongs to the set of valid characters.
+   - Returns `True` if all characters are valid DNA characters; otherwise, returns `False`.
+2. Function `main()`:
+   - Parses the command-line argument as the DNA string to be validated.
+   - Calls the `isValidDNA()` function to check if the provided DNA string is valid.
+   - Writes the result (`True` or `False`) to the standard output using `stdio.writeln()`.
+---
+
+assignment10/verifypass.py -> 
+---
+1. Function `is_safe_password(password)`:
+   - Determines if a given password is safe based on certain criteria.
+   - Checks if the password meets the following criteria:
+     - Length of at least 8 characters.
+     - Contains at least one digit.
+     - Contains at least one uppercase letter.
+     - Contains at least one lowercase letter.
+     - Contains at least one special character (not alphanumeric).
+   - Returns `True` if the password meets all criteria; otherwise, returns `False`.
+2. Function `main()`:
+   - Parses the command-line argument as the password to be verified for safety.
+   - Calls the `is_safe_password()` function to check if the provided password is safe.
+   - Writes the result (`True` or `False`) to the standard output using `stdio.writeln()`.
+---

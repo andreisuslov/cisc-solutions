@@ -1,0 +1,81 @@
+---
+max3.py ->
+- This Python script defines a function called 'max3' that takes three arguments (a, b, c).
+- The 'max3' function returns the largest of the three input numbers (a, b, c).
+- It does this by using a series of conditional statements to compare the values of 'a', 'b', and 'c' and returning the largest one.
+- If two or more numbers are equal and the largest, the function will return the first one it encounters.
+- The script also checks the command-line arguments to ensure that there are exactly 4 arguments provided (including the script name).
+- If there are not 4 arguments, it prints a usage message indicating the correct way to run the script.
+- If there are 4 arguments, it converts them to floating-point numbers and assigns them to variables 'first', 'second', and 'third'.
+- It then calls the 'max3' function with these variables and stores the result in 'biggest'.
+- Finally, it uses 'stdio.writef' to print the largest number as an integer with a message.
+---
+
+---
+odd.py ->
+- This Python script defines a function called 'is_odd_true' that takes three arguments (a, b, c).
+- The 'is_odd_true' function returns True if the sum of the input numbers (a, b, c) is odd; otherwise, it returns False.
+- It calculates the sum of the numbers and checks if it's an odd number using the modulo operator (%).
+
+- The script also checks the command-line arguments to ensure that there are exactly 4 arguments provided (including the script name).
+- If there are not 4 arguments, it prints a usage message indicating the correct way to run the script.
+- If there are 4 arguments, it converts them to boolean values (True or False) and stores them in a list called 'values'.
+- It then unpacks the 'values' list and calls the 'is_odd_true' function with these values.
+- The result is stored in the 'result' variable.
+- Finally, it uses 'stdio.writeln' to print the result (True or False) to the standard output.
+---
+
+---
+sigmoid.py ->
+- This Python script calculates the sigmoid function for a given input number 'x'.
+- It begins by importing the 'sys', 'stdio', and 'math' modules.
+- The 'sigmoid' function takes a single argument 'x' and computes the sigmoid of 'x' using the formula 1 / (1 + exp(-x)), where 'exp' is the exponential function from the 'math' module.
+- The script checks the number of command-line arguments using 'len(sys.argv)'. If there are not exactly 2 arguments (including the script name), it prints a usage message indicating how to correctly use the script.
+- If there are 2 arguments, it converts the second argument (the number provided) to a floating-point number and assigns it to the variable 'x'.
+- It then calculates the sigmoid of 'x' using the 'sigmoid' function and stores the result in the 'result' variable.
+- Finally, it uses 'stdio.writef' to print the result with three decimal places.
+---
+
+---
+signum.py ->
+- This Python script defines a function called 'signum' that takes one argument 'x'.
+- The 'signum' function returns 1 if 'x' is greater than 0, 0 if 'x' is equal to 0, and -1 if 'x' is less than 0.
+- It uses conditional statements to determine the sign of 'x'.
+- The script checks the command-line arguments to ensure that there are exactly 2 arguments provided (including the script name).
+- If there are not 2 arguments, it prints a usage message indicating the correct way to run the script.
+- If there are 2 arguments, it converts the second argument to a floating-point number and assigns it to the variable 'x'.
+- It then calls the 'signum' function with 'x' and stores the result in the variable 'result'.
+- Finally, it uses 'stdio.writeln' to print the result, which is either 1, 0, or -1.
+---
+
+---
+normalize.py ->
+- This Python script defines a function called 'normalize' and a main section to normalize a list of values.
+- The 'normalize' function takes a list of values as input and returns a new list where each value is normalized.
+- Inside the 'normalize' function, it calculates the minimum and maximum values in the input list using the 'min' and 'max' functions.
+- It then uses a list comprehension to iterate over each value in the input list and calculates the normalized value using the formula (x - min_val) / (max_val - min_val), where 'x' is the current value, 'min_val' is the minimum value in the input list, and 'max_val' is the maximum value in the input list.
+- The script reads a list of floating-point values using 'stdarray.readFloat1D' and stores them in the 'values' variable.
+- It then calls the 'normalize' function with the 'values' list and stores the result in the 'normalized_values' variable.
+- Finally, it iterates through the 'normalized_values' list and prints each normalized value with a precision of 3 decimal places using 'stdio.writef', followed by a newline character using 'stdio.writeln'.
+---
+
+---
+fourier_series.py ->
+- This Python script defines several functions for working with Fourier series, generating sound waves, and plotting the series.
+- The 'fourier_series' function calculates the value of the n-th Fourier series at a given time 't' by summing up the cosine terms for each harmonic from 1 to 'n'.
+- The 'tone' function generates a tone with a specified frequency and duration using the sine wave formula.
+- The 'main' function is the entry point of the script:
+  - It reads the value of 'n' (the order of the Fourier series) from the command-line arguments.
+  - It defines parameters for the Fourier series plot, such as 't_min', 't_max', 't_samples', and 't_step'.
+  - It prepares arrays 't_values' and 'series_values' to store data for plotting.
+  - It generates data points for the Fourier series plot by iterating through 't_samples'.
+  - It sets up the plot window using 'stddraw' but doesn't display it.
+  - It draws the Fourier series on the plot.
+  - It saves the plot as "fourier_series_plot.png" in the current directory.
+  - It generates a sound wave based on the Fourier series values, varying the frequency of the tone with each data point.
+  - It plays the generated sound wave using 'stdaudio.playSamples'.
+- The script is executed only if it's the main module (not imported as a library).
+
+This script calculates and visualizes the Fourier series of a given order 'n' and generates a sound wave based on that series. It then saves the Fourier series plot as an image file and plays the generated sound wave.
+---
+

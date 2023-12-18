@@ -1,0 +1,52 @@
+1.2.1
+
+The given sequence of statements seems redundant and doesn't achieve any meaningful change to the values of variables `a` and `b`. Here's a step-by-step object-level trace:
+
+1. `t = a`
+   - `t` gets the value of `a`.
+
+2. `b = t`
+   - `b` gets the value of `t` (which is the original value of `a`). If `b` had a different value before this statement, it would now have the value of `a`. However, given the next step, this change is effectively pointless.
+
+3. `a = b`
+   - `a` gets the value of `b`. But since `b` was just set to the value of `a` in the previous step, there's no change to `a`.
+
+In the end, both `a` and `b` retain their original value of `a`, and there's no net change. The operations are effectively a no-op for swapping or modifying the values of `a` and `b`.
+
+
+1.2.9
+
+1. Effect of writing `sqrt` instead of `math.sqrt` in PROGRAM 1.2.4:
+
+If you write `sqrt` instead of `math.sqrt`, the program will raise a `NameError` unless you've specifically imported the `sqrt` function from the `math` module. The `math` module in Python provides mathematical functions, including the square root function `sqrt`. To use it without prefixing with `math.`, you'd typically import it as:
+
+from math import sqrt
+
+Without this import and by only writing `sqrt`, the Python interpreter won't recognize the function, leading to an error.
+
+2. Simplification of the expression (not (a < b) and not (a > b)):
+
+This expression checks two conditions:
+- That `a` is NOT less than `b`
+- That `a` is NOT greater than `b`
+
+If both of these conditions are true, it implies that `a` must be equal to `b`. Hence, the expression can be simplified to:
+
+a == b
+
+Both expressions will return `True` if `a` is equal to `b`, and `False` otherwise.
+
+
+1.2.14
+
+The problem with the given code is the order of operations. In the formula F = (G * m1 * m2) / r^2, the multiplication of G, m1, and m2 should be done first, and then the result should be divided by the square of the radius.
+
+In the provided code:
+force = G * mass1 * mass2 / radius * radius
+the multiplication of the radius with itself (squaring the radius) is done after dividing the product of G, mass1, and mass2 due to Python's left-to-right evaluation. This leads to incorrect results.
+
+The corrected code is:
+force = G * mass1 * mass2 / (radius * radius)
+By enclosing the radius multiplication inside parentheses, you ensure that the radius is squared first, and then the division is done, correctly implementing the formula.
+
+

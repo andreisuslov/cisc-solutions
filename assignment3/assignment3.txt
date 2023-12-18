@@ -1,0 +1,55 @@
+1.1.2 Omissions in helloworld.py:
+
+a. import:
+If you omit import, Python will not understand the subsequent module name, since you haven't given it any instruction to import a module. This will result in a syntax error.
+
+b. stdio:
+If you just write import without stdio, the Python interpreter won't know which module to import, leading to a syntax error.
+
+c. import stdio:
+If you omit the entire import stdio line, any functions or methods you try to use from the stdio module will result in a NameError because Python won't recognize them.
+
+1.1.3 Misspellings in helloworld.py:
+
+a. import:
+If you misspell import (like imort), Python will raise a syntax error, not recognizing the keyword.
+
+b. stdio:
+If you misspell stdio (like sdtio), Python will raise a ModuleNotFoundError since it won't find a module by the misspelled name.
+
+c. write:
+If write is a function from the stdio module and you misspell it, Python will raise a AttributeError because the stdio module doesn't have a function by the misspelled name.
+
+d. writeln:
+Similarly, if writeln is misspelled, you'll encounter an AttributeError.
+
+1.1.4 Omissions in helloworld.py:
+
+a. the first ':
+If you omit the first quotation mark, Python will interpret the text as code and most likely raise a SyntaxError.
+
+b. the second ':
+If you omit the second quotation mark, Python will think the string continues and will raise a SyntaxError when it encounters another piece of code or the end of the file.
+
+c. the stdio.writeln() statement:
+If you omit the stdio.writeln() statement entirely, your program won't output anything (assuming that's the only output statement in your program).
+
+1.1.5 Execution of useargument.py:
+
+a. python useargument.py python:
+The script useargument.py will receive "python" as an argument.
+
+b. python useargument.py @!&∧%:
+The script will receive "@!&∧%" as an argument.
+
+c. python useargument.py 1234:
+The script will receive "1234" as an argument.
+
+d. python useargument Bob:
+This will raise a FileNotFoundError because Python will look for a script named useargument instead of useargument.py.
+
+e. useargument.py Bob:
+Depending on the system and configuration, this may execute useargument.py with "Bob" as an argument. On some systems, you might need a shebang line at the beginning of your script.
+
+f. python useargument.py Alice Bob:
+The script useargument.py will receive two arguments: "Alice" and "Bob". If the script is not designed to handle multiple arguments, this may lead to unexpected behavior or errors.

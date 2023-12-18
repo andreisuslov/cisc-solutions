@@ -1,0 +1,98 @@
+----------------
+# integers.py ->
+----------------
+A Python module designed to deal with basic integer-related tasks. This module
+includes functions for checking prime numbers, finding relative primes, calculating
+factors, greatest common divisors, least common multiples, Euler's totient function, 
+and checking if an integer is odd or even.
+To use this module, run it as a Python script while passing two integer arguments.
+Example: `python integers.py 15 20`
+This will execute various integer operations for the given integers.
+### isprime(variable)
+- Checks if the given number is a Prime Number or not.
+- Returns True if the number is prime, False otherwise, or an error message for invalid input.
+### isrelativeprime(a, b)
+- Checks if two numbers are relatively prime.
+- Returns True if relatively prime, False otherwise.
+### factors(a)
+- Returns all factors of the given integer.
+### divisor(a, b)
+- Calculates the greatest common divisor of two numbers.
+### multiple(a, b)
+- Calculates the least common multiple of two numbers.
+### totient(n)
+- Computes Euler's Totient function for a given integer.
+### isodd(a)
+- Checks if the given integer is odd.
+### iseven(a)
+- Checks if the given integer is even.
+The module includes a `main` function that tests various operations using command-line arguments.
+It requires two integers as arguments and demonstrates each function in the module.
+Run the script with two integers: `python integers.py 12 18`
+This will output the results of all functions for the integers 12 and 18.
+-+-+-+-+-+-+-+-
+
+
+----------------
+# matrix.py ->
+----------------
+A Python module dedicated to performing various matrix operations, such as 
+creating random matrices, calculating the identity matrix, performing matrix 
+addition, subtraction, and multiplication, computing dot products, and transposing matrices.
+To use this module, import it into your Python script and call the desired matrix functions.
+Example: `result = matrix.add(matrix_a, matrix_b)`
+This will add `matrix_a` and `matrix_b` together.
+### rand(m, n)
+- Creates an m-by-n matrix with random floats between 0 and 1.
+### identity(n)
+- Generates an n-by-n identity matrix.
+### dot(v1, v2)
+- Computes the dot product of two vectors `v1` and `v2`.
+### transpose(matrix)
+- Transposes the given matrix.
+### add(m1, m2)
+- Adds two matrices `m1` and `m2`.
+### subtract(m1, m2)
+- Subtracts matrix `m2` from matrix `m1`.
+### multiplyMM(m1, m2)
+- Multiplies two matrices `m1` and `m2`.
+### multiplyMV(m, v)
+- Multiplies a matrix `m` by a vector `v`.
+### multiplyVM(v, m)
+- Multiplies a vector `v` by a matrix `m`.
+The module includes a `main` function that demonstrates various matrix operations using predefined matrices.
+Run the script to see demonstrations of matrix operations: `python matrix.py`
+This will output the results of adding, subtracting, and multiplying the predefined matrices.
+-+-+-+-+-+-+-+-
+
+----------------
+# trigonometry.py ->
+----------------
+A Python module providing functions for basic trigonometric operations including 
+sine, cosine, tangent, and their hyperbolic counterparts. The functions calculate
+these trigonometric values based on given radian angles.
+To use this module, import it into your Python script and call the desired trigonometric functions.
+Example: `result = trigonometry.sin(x)`
+This will calculate the sine of `x`, where `x` is in radians.
+### sin(x)
+- Calculates the sine of `x` (in radians).
+### cos(x)
+- Calculates the cosine of `x` (in radians).
+### tan(x)
+- Calculates the tangent of `x` (in radians).
+### sinh(x)
+- Calculates the hyperbolic sine of `x`.
+### cosh(x)
+- Calculates the hyperbolic cosine of `x`.
+### tanh(x)
+- Calculates the hyperbolic tangent of `x`.
+### sech(x)
+- Calculates the hyperbolic secant of `x`. Throws a ValueError if cosh(x) is 0.
+### csch(x)
+- Calculates the hyperbolic cosecant of `x`. Throws a ValueError if sinh(x) is 0.
+### coth(x)
+- Calculates the hyperbolic cotangent of `x`. Throws a ValueError if tanh(x) is 0.
+The module includes a `main` function that demonstrates the use of each function using a set of test values.
+Run the script to see demonstrations of trigonometric and hyperbolic functions: `python trigonometry.py`
+This will output the results of the trigonometric and hyperbolic functions for predefined values.
+-+-+-+-+-+-+-+-

@@ -1,0 +1,37 @@
+---
+distance.py ->
+---
+1. Define the function `euclidean_distance`:
+   - Accepts two lists as arguments representing the vectors.
+   - Initialize a variable `sum_of_squares` to 0.
+   - Iterate over the indices of the vectors:
+     - Compute the difference between the corresponding elements of the vectors.
+     - Square the difference and add it to `sum_of_squares`.
+   - Return the square root of `sum_of_squares` as the Euclidean distance.
+2. Process command line arguments:
+   - Convert the first and second command line arguments into lists of floats, treating commas as delimiters.
+3. Compute the distance:
+   - Call the `euclidean_distance` function with the two vectors.
+   - Print the computed distance rounded to 4 decimal places.
+
+---
+print2d.py ->
+---
+a. Iterate through each row of the 2D array.
+b. For each row:
+    i. Iterate through its elements.
+    ii. Check if the element is True or False.
+        - If True, print '*'.
+        - If False, print a space.
+    iii. Move to a new line after processing all elements of the row.
+- Convert the string representation of the 2D array (from command-line argument) into an actual 2D list.
+- Pass the processed 2D list to the function to get the desired output.
+
+---
+birthday.py ->
+---
+1. We start with an empty room and no birthdays.
+2. We randomly pick a birthday for each person entering the room. This birthday is a number between 0 and 364, representing the 365 days in a year.
+3. Every time a person enters, we check if their birthday is the same as someone already in the room.
+4. We keep a count of how many people have entered the room.
+5. As soon as two people have the same birthday, we stop and note down the count.
